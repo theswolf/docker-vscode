@@ -21,7 +21,7 @@ RUN         npm install -g typescript
 
 
 
-RUN         wget -O /tmp/vsc.deb $VSC_DL_URL && \
+RUN         wget $VSC_DL_URL -O /tmp/vsc.deb -q && \
             apt install -y /tmp/vsc.deb && \
             rm -f /tmp/vsc.deb
 
