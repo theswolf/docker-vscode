@@ -1,8 +1,8 @@
 #FROM        ubuntu:xenial
 FROM buildpack-deps:jessie-scm
 
-ENV         DEBIAN_FRONTEND=noninteractive \
-            VSC_DL_URL=https://go.microsoft.com/fwlink/?LinkID=760868
+ENV         DEBIAN_FRONTEND=noninteractive
+ARG         VSC_DL_URL=https://go.microsoft.com/fwlink/?LinkID=760868
 
 RUN         apt-get update && \
             apt-get install -y \
@@ -21,8 +21,8 @@ RUN         npm install -g typescript
 
 
 
-RUN         wget $VSC_DL_URL -O /tmp/vsc.deb -q && \
-            apt install -y /tmp/vsc.deb && \
+RUN         wget $VSC_DL_URL -O /tmp/vsc.deb -q
+RUN         dpkg -i /tmp/vsc.deb && \
             rm -f /tmp/vsc.deb
 
 RUN mkdir -p /home/developer && \
