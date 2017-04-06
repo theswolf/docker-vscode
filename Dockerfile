@@ -17,6 +17,7 @@ RUN         apt-get update && \
                 libasound2 \
                 libnotify4 \
                 libnss3 \
+                libxss1 \
                 libxkbfile1 && \
                 rm -rf /var/lib/apt/lists/*
             
