@@ -14,7 +14,10 @@ RUN         apt-get update && \
                 libgtk2.0 \
                 libgconf-2-4 \
                 sudo \
-                libasound2 && \
+                libasound2 \
+                libnotify4 \
+                libnss3 \
+                libxkbfile1 && \
                 rm -rf /var/lib/apt/lists/*
             
 RUN         npm install -g typescript
