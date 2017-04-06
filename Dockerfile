@@ -15,8 +15,9 @@ RUN         apt-get update && \
                 libgconf-2-4 \
                 sudo \
                 libasound2 && \
-                rm -rf /var/lib/apt/lists/* \
-            npm install -g typescript
+                rm -rf /var/lib/apt/lists/*
+            
+RUN         npm install -g typescript
 
 
 
