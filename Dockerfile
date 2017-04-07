@@ -18,7 +18,10 @@ RUN         apt-get update && \
                 libnotify4 \
                 libnss3 \
                 libxss1 \
+                libcurl3 \
+                libssh2-1 \
                 libxkbfile1 && \
+                
                 rm -rf /var/lib/apt/lists/*
             
 RUN         npm install -g typescript
@@ -28,6 +31,11 @@ RUN         npm install -g typescript
 RUN         wget $VSC_DL_URL -O /tmp/vsc.deb -q
 RUN         dpkg -i /tmp/vsc.deb && \
             rm -f /tmp/vsc.deb
+            
+            
+RUN 		wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb -O /tmp/chrome.deb -q
+RUN         dpkg -i /tmp/chrome.deb && \
+            rm -f /tmp/chrome.deb
 
 RUN mkdir -p /home/developer && \
     echo "developer:x:1000:1000:Developer,,,:/home/developer:/bin/bash" >> /etc/passwd && \
