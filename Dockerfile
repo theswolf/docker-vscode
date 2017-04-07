@@ -20,8 +20,12 @@ RUN         apt-get update && \
                 libxss1 \
                 libcurl3 \
                 libssh2-1 \
+                libpango1.0-0 \
+                libx11-xcb1 \
+                fonts-liberation \
+                libappindicator1 \
+                xdg-utils \
                 libxkbfile1 && \
-                
                 rm -rf /var/lib/apt/lists/*
             
 RUN         npm install -g typescript
