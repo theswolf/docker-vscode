@@ -40,6 +40,11 @@ RUN         dpkg -i /tmp/vsc.deb && \
 RUN 		wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb -O /tmp/chrome.deb -q
 RUN         dpkg -i /tmp/chrome.deb && \
             rm -f /tmp/chrome.deb
+            
+RUN         apt-get update && \
+            apt-get install -y \
+                meld zip \
+                rm -rf /var/lib/apt/lists/*
 
 RUN mkdir -p /home/developer && \
     echo "developer:x:1000:1000:Developer,,,:/home/developer:/bin/bash" >> /etc/passwd && \
