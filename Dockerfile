@@ -44,7 +44,7 @@ RUN         dpkg -i /tmp/chrome.deb && \
 RUN         apt-get update && \
             apt-get install -y \
                 meld zip \
-                rm -rf /var/lib/apt/lists/*
+                rm -Rf /var/lib/apt/lists/*
 
 RUN mkdir -p /home/developer && \
     echo "developer:x:1000:1000:Developer,,,:/home/developer:/bin/bash" >> /etc/passwd && \
