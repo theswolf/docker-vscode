@@ -1,5 +1,6 @@
 #FROM        ubuntu:xenial
-FROM buildpack-deps:jessie-scm
+#FROM buildpack-deps:jessie-scm
+FROM openjdk:8
 
 ENV         DEBIAN_FRONTEND=noninteractive
 ARG         VSC_DL_URL=https://go.microsoft.com/fwlink/?LinkID=760868
