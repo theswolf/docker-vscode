@@ -46,6 +46,11 @@ RUN         apt-get update && \
             apt-get install -y \
                 meld zip && \
                 rm -rf /var/lib/apt/lists/*
+                
+# Android build requirements
+RUN apt-get update && \
+    apt-get -y install lib32stdc++6 lib32z1 --no-install-recommends && \
+rm -r /var/lib/apt/lists/*
 
 RUN mkdir -p /home/developer && \
     echo "developer:x:1000:1000:Developer,,,:/home/developer:/bin/bash" >> /etc/passwd && \
