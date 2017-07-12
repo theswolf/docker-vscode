@@ -9,7 +9,6 @@ RUN         apt-get update && \
             apt-get install -y \
                 openssl \
                 nodejs \
-                npm \
                 git \
                 wget \
                 libgtk2.0 \
@@ -29,7 +28,7 @@ RUN         apt-get update && \
                 libxkbfile1 && \
                 rm -rf /var/lib/apt/lists/*
             
-RUN         npm install -g typescript
+#RUN         npm install -g typescript
 
 
 
