@@ -43,7 +43,7 @@ RUN         dpkg -i /tmp/chrome.deb && \
             
 RUN         apt-get update && \
             apt-get install -y \
-                meld zip && \
+                meld nano zip node-npm-run-path && \
                 rm -rf /var/lib/apt/lists/*
                 
 # Android build requirements
