@@ -28,6 +28,7 @@ RUN         apt-get update && \
                 nodejs \
                 npm \
                 lsb-release \
+                libsecret-1-0 \
                 libxkbfile1 && \
                 rm -rf /var/lib/apt/lists/*
             
