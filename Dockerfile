@@ -36,8 +36,8 @@ RUN         apt-get update && \
 
 
 RUN         wget $VSC_DL_URL -O /tmp/vsc.deb -q
-RUN         dpkg -i /tmp/vsc.deb && \
-            rm -f /tmp/vsc.deb
+RUN         dpkg -i /tmp/vsc.deb
+RUN         rm -f /tmp/vsc.deb
             
             
 RUN 		wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb -O /tmp/chrome.deb -q
